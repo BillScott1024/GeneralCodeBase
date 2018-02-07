@@ -1,5 +1,5 @@
 
-[显示效果](countDown/countDown-0.png)
+[显示效果]: countdown/countDown-0.png
 # GeneralCodeBase
 the General code base,there are some little tips ,function,code,you can use anywhere
 
