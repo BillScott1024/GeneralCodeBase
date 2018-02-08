@@ -1,0 +1,9 @@
+框线倒计时，代码说明
+	1.CountDown.zip文件为Cocos Creator导出资源，在Cocos->文件->导入资源，来导入CountDown.zip文件；
+	2.开始倒计时调用函数：
+		this.countDownNode.getComponent("CountDown").startCountDown(duration);
+
+		* countDownNode 为倒计时节点；
+		* duration 倒计时时间；
+	3.结束倒计时调用函数：
+		this.countDownNode.getComponent("Countdown").stopCountDown();
