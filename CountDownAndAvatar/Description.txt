@@ -1,4 +1,4 @@
-框线倒计时，代码说明
+扇形头像遮罩倒计时，代码说明
 	1.CountDown.zip文件为Cocos Creator导出资源，在Cocos->文件->导入资源，来导入CountDown.zip文件；
 	2.开始倒计时调用函数：
 		this.countDownNode.getComponent("CountDown").startCountDown(duration);
