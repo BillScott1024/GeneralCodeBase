@@ -1,0 +1,70 @@
+2018-02-11T12:39:01.973Z - normal: Load ~/.CocosCreator/settings.json
+2018-02-11T12:39:01.987Z - normal: checking language setting...
+2018-02-11T12:39:01.988Z - normal: Language: zh
+2018-02-11T12:39:04.800Z - warn: Invalid layout profile, remove old profile and init a new one at: F:\GitHubRepo\GeneralCodeBase\Shaders\local\layout.windows.json
+2018-02-11T12:39:04.818Z - success: protocol editor-framework registered
+2018-02-11T12:39:04.818Z - success: protocol app registered
+2018-02-11T12:39:04.818Z - success: protocol theme registered
+2018-02-11T12:39:04.819Z - success: protocol packages registered
+2018-02-11T12:39:04.819Z - success: protocol unpack registerred
+2018-02-11T12:39:04.819Z - success: protocol disable-commonjs registerred
+2018-02-11T12:39:05.080Z - normal: connected!
+2018-02-11T12:39:05.084Z - normal: Check project F:\GitHubRepo\GeneralCodeBase\Shaders
+2018-02-11T12:39:05.089Z - normal: Initializing Cocos2d
+2018-02-11T12:39:05.565Z - normal: Initializing Asset Database
+2018-02-11T12:39:05.651Z - success: protocol uuid registerred
+2018-02-11T12:39:05.652Z - success: protocol db registerred
+2018-02-11T12:39:05.652Z - success: protocol thumbnail registerred
+2018-02-11T12:39:05.652Z - normal: Loading editor/builtin packages
+2018-02-11T12:39:05.710Z - success: anysdk loaded
+2018-02-11T12:39:05.977Z - success: assets loaded
+2018-02-11T12:39:05.980Z - success: builder loaded
+2018-02-11T12:39:05.984Z - success: cocos-analytics loaded
+2018-02-11T12:39:05.991Z - success: console loaded
+2018-02-11T12:39:05.997Z - success: hierarchy loaded
+2018-02-11T12:39:06.001Z - success: inspector loaded
+2018-02-11T12:39:06.003Z - success: keystore loaded
+2018-02-11T12:39:06.007Z - success: node-library loaded
+2018-02-11T12:39:06.010Z - success: package-asset loaded
+2018-02-11T12:39:06.013Z - success: preferences loaded
+2018-02-11T12:39:06.017Z - success: project-exporter loaded
+2018-02-11T12:39:06.046Z - success: project-importer loaded
+2018-02-11T12:39:06.050Z - success: project-settings loaded
+2018-02-11T12:39:06.055Z - success: ui-kit loaded
+2018-02-11T12:39:06.058Z - success: ui-grid loaded
+2018-02-11T12:39:06.065Z - success: scene loaded
+2018-02-11T12:39:06.068Z - success: sprite-editor loaded
+2018-02-11T12:39:06.074Z - success: store loaded
+2018-02-11T12:39:06.083Z - success: timeline loaded
+2018-02-11T12:39:06.083Z - normal: Loading builtin packages
+2018-02-11T12:39:06.087Z - success: asset-db-debugger loaded
+2018-02-11T12:39:06.090Z - success: code-editor loaded
+2018-02-11T12:39:06.091Z - success: color-picker loaded
+2018-02-11T12:39:06.093Z - success: package-manager loaded
+2018-02-11T12:39:06.103Z - success: sdkbox loaded
+2018-02-11T12:39:06.110Z - success: tester loaded
+2018-02-11T12:39:06.112Z - success: ui-kit-preview-extra loaded
+2018-02-11T12:39:06.114Z - success: ui-kit-preview loaded
+2018-02-11T12:39:06.117Z - success: ui-tree loaded
+2018-02-11T12:39:08.595Z - normal: Initializing project F:\GitHubRepo\GeneralCodeBase\Shaders
+2018-02-11T12:39:08.606Z - normal: Loading packages
+2018-02-11T12:39:08.619Z - success: clean loaded
+2018-02-11T12:39:08.619Z - normal: Watching packages
+2018-02-11T12:39:08.666Z - normal: Run Application
+2018-02-11T12:39:11.499Z - success: preview server running at http://localhost:7457
+2018-02-11T12:39:21.336Z - normal: 1.8.0
+2018-02-11T12:39:33.186Z - normal: cocos2d: cc.shaderCache._loadDefaultShader, error shader type
+2018-02-11T12:39:33.219Z - warn: Failed to set property New Sprite<Sprite> to 1 at shaderType, TypeError: cc.setProgram is not a function
+    at Sprite._useHighLight (F:\GitHubRepo\GeneralCodeBase\Shaders\temp\quick-scripts\assets\Script\Sprite.js:111:16)
+    at Sprite._updateShaderType (F:\GitHubRepo\GeneralCodeBase\Shaders\temp\quick-scripts\assets\Script\Sprite.js:59:22)
+    at Sprite.notify (F:\GitHubRepo\GeneralCodeBase\Shaders\temp\quick-scripts\assets\Script\Sprite.js:31:22)
+    at Sprite.val.set [as shaderType] (G:\CocosCreator\resources\engine\cocos2d\core\platform\preprocess-class.js:64:20)
+    at _setPropertyByPath (G:\CocosCreator\resources\app.asar\editor\page\scene-utils\set-property-by-path.js:1:2023)
+    at setDeepPropertyByPath (G:\CocosCreator\resources\app.asar\editor\page\scene-utils\set-property-by-path.js:1:3971)
+    at Object.Editor.setPropertyByPath (G:\CocosCreator\resources\app.asar\editor\page\scene-utils\set-property-by-path.js:1:5227)
+    at Object.setProperty (G:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:14257)
+    at HTMLElement.scene:set-property (file:///G:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:8307)
+    at Object.Panel._dispatch (G:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:2283)
+2018-02-11T12:40:20.924Z - success: API data generated and copied to F:\GitHubRepo\GeneralCodeBase\Shaders\creator.d.ts
+2018-02-11T12:46:55.399Z - normal: WebGL error 1282
+2018-02-11T12:48:29.740Z - normal: cocos2d: cc.shaderCache._loadDefaultShader, error shader type

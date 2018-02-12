@@ -23,7 +23,7 @@ cc.Class({
 
     onLoad() {
         var self = this;
-        self.test();
+        // self.test();
     },
 
     test: function () {

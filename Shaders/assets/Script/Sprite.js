@@ -1,0 +1,159 @@
+var ShadersEnum = cc.Enum({
+    Default: 0,
+    HighLight: 1,
+    Gray: 2,
+});
+
+/* ShadersEnum.HighLight */
+var ccShader_HighLight_Vert = require("../Src/ccShader_HighLight_Vert.js");
+var ccShader_HighLight_Frag = require("../Src/ccShader_HighLight_Frag.js");
+var ccShader_HighLight = 'ccShader_HighLight';
+
+/* ShadersEnum.HighLight */
+var ccShader_Gray_Vert = require("../Src/ccShader_Gray_Vert.js");
+var ccShader_Gray_Frag = require("../Src/ccShader_Gray_Frag.js");
+var ccShader_Gray = 'ccShader_Gray';
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: 
+    {
+        shaderType:
+        {
+            default: ShadersEnum.Default,
+            type: ShadersEnum,
+            notify: function()
+            {
+                this._updateShaderType();
+            }
+        },
+        
+        currState:
+        {
+            default: ShadersEnum.Default,
+            type: ShadersEnum,
+            visible: false,
+        },
+    },
+
+    onLoad: function () 
+    {
+        this.shaderType = ShadersEnum.Default;
+        this.currState = this.shaderType;
+        this._updateShaderType();
+    },
+    
+    /* 更新shader */
+    _updateShaderType: function()
+    {
+        if ( this.shaderType === this.currState ) { return; }
+        
+        switch( this.shaderType )
+        {
+            case ShadersEnum.Default:
+                this._useDefault();
+                break;
+            case ShadersEnum.HighLight:
+                this._useHighLight();
+                break;
+            case ShadersEnum.Gray:
+                this._useGray();
+                break;
+            default:
+                break;
+        }
+    },
+    
+    /* 使用默认 */
+    _useDefault: function()
+    {
+        /* 官方实现原图shader */
+        // var kProgram = cc.shaderCache.programForKey( cc.SHADER_POSITION_TEXTURECOLOR );
+        var kProgram = cc.shaderCache.getProgram(cc.SHADER_POSITION_TEXTURECOLOR); 
+        
+        /* if 个人认为是多余的, 官方已实现好, 为了处理API相同, 这里还是写上了 */
+        if ( typeof kProgram === "undefined" )
+        {
+            var program = new cc.GLProgram();
+            program.initWithVertexShaderByteArray(cc.SHADER_POSITION_TEXTURE_COLOR_VERT, cc.SHADER_POSITION_TEXTURE_COLOR_FRAG);
+    
+            program.addAttribute(cc.ATTRIBUTE_NAME_POSITION, cc.VERTEX_ATTRIB_POSITION);
+            program.addAttribute(cc.ATTRIBUTE_NAME_COLOR, cc.VERTEX_ATTRIB_COLOR);
+            program.addAttribute(cc.ATTRIBUTE_NAME_TEX_COORD, cc.VERTEX_ATTRIB_TEX_COORDS);
+            program.link();
+            program.updateUniforms();  
+          //  cc.setProgram( this.node._sgNode, program );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(program);
+            /* 官方不用在添加 key 保存到 shaderCache 中 */
+            //cc.shaderCache.addProgram( program, ccShader_Default );
+        }
+        else
+        {
+            // cc.setProgram( this.node._sgNode, kProgram );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(kProgram)
+        }
+        
+        this.currState = this.shaderType;
+    },
+    
+    /* 使用高亮 */
+    _useHighLight: function()
+    {
+        // var kProgram = cc.shaderCache.programForKey( ccShader_HighLight ); 
+        var kProgram = cc.shaderCache.getProgram(ccShader_HighLight);
+        if ( typeof kProgram === 'undefined' )
+        {
+            var program = new cc.GLProgram();
+            program.initWithVertexShaderByteArray(ccShader_HighLight_Vert, ccShader_HighLight_Frag);
+    
+            program.addAttribute(cc.ATTRIBUTE_NAME_POSITION, cc.VERTEX_ATTRIB_POSITION);
+            program.addAttribute(cc.ATTRIBUTE_NAME_COLOR, cc.VERTEX_ATTRIB_COLOR);
+            program.addAttribute(cc.ATTRIBUTE_NAME_TEX_COORD, cc.VERTEX_ATTRIB_TEX_COORDS);
+            program.link();
+            program.updateUniforms();  
+            // cc.setProgram( this.node._sgNode, program );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(program);
+            
+            cc.shaderCache.addProgram( program, ccShader_HighLight );
+        }
+        else
+        {
+            // cc.setProgram( this.node._sgNode, kProgram );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(kProgram);
+        }
+        
+        this.currState = this.shaderType;
+    },
+    
+    /* 使用置灰 */
+    _useGray: function()
+    {
+        // var kProgram = cc.shaderCache.programForKey( ccShader_Gray ); 
+        var kProgram = cc.shaderCache.getProgram(ccShader_Gray);
+        if ( typeof kProgram === 'undefined' )
+        {
+            var program = new cc.GLProgram();
+            program.initWithVertexShaderByteArray(ccShader_Gray_Vert, ccShader_Gray_Frag);
+    
+            program.addAttribute(cc.ATTRIBUTE_NAME_POSITION, cc.VERTEX_ATTRIB_POSITION);
+            program.addAttribute(cc.ATTRIBUTE_NAME_COLOR, cc.VERTEX_ATTRIB_COLOR);
+            program.addAttribute(cc.ATTRIBUTE_NAME_TEX_COORD, cc.VERTEX_ATTRIB_TEX_COORDS);
+            program.link();
+            program.updateUniforms();  
+            // cc.setProgram( this.node._sgNode, program );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(program);
+            
+            cc.shaderCache.addProgram( program, ccShader_Gray );
+        }
+        else
+        {
+            // cc.setProgram( this.node._sgNode, kProgram );
+            this.node.getComponent(cc.Sprite)._sgNode.setShaderProgram(kProgram);
+        }
+        
+        this.currState = this.shaderType;
+    },
+
+});
+
