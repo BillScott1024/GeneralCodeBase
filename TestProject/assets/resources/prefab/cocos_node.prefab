@@ -26,13 +26,9 @@
     ],
     "_tag": -1,
     "_active": true,
-    "_components": [
-      {
-        "__id__": 10
-      }
-    ],
+    "_components": [],
     "_prefab": {
-      "__id__": 11
+      "__id__": 10
     },
     "_id": "",
     "_opacity": 255,
@@ -126,7 +122,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8026ad1f-9c4a-4977-8e75-e94bef241e70"
     },
     "fileId": "c4f30YOS65G64U2TwufdJ+2",
     "sync": false
@@ -213,7 +209,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8026ad1f-9c4a-4977-8e75-e94bef241e70"
     },
     "fileId": "31f1bH7V69Ajr1iXhluMpTB",
     "sync": false
@@ -304,32 +300,10 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8026ad1f-9c4a-4977-8e75-e94bef241e70"
     },
     "fileId": "9aN6moooJFPYib8z36hKcc",
     "sync": false
-  },
-  {
-    "__type__": "280c3rsZJJKnZ9RqbALVwtK",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "label": {
-      "__id__": 5
-    },
-    "shuffleAudio": {
-      "__uuid__": "f52cb991-1923-41a0-a056-f57d69118258"
-    },
-    "moveAudio": {
-      "__uuid__": "4a6b3415-3eb9-44e8-a822-4982164bece4"
-    },
-    "cocosPicNode": {
-      "__id__": 7
-    },
-    "text": "Hello, World!"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -337,7 +311,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "8026ad1f-9c4a-4977-8e75-e94bef241e70"
     },
     "fileId": "ccvGceLehEZbZiw8ljbXgb",
     "sync": false
